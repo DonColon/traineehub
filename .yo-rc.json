@@ -1,0 +1,17 @@
+{
+  "generator-ui5-ts-app": {
+    "namespace": "com.dardan.rrafshi.traineehub",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.119.0",
+    "author": "Dardan Rrafshi",
+    "initrepo": false,
+    "tstypes": "@openui5/types",
+    "tstypesVersion": "1.119.0",
+    "appId": "com.dardan.rrafshi.traineehub",
+    "appURI": "com/dardan/rrafshi/traineehub",
+    "cdnDomain": "sdk.openui5.org",
+    "defaultTheme": "sap_horizon",
+    "gte11150": true,
+    "setupCompleted": true
+  }
+}

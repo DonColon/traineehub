@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="com.dardan.rrafshi.traineehub.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout">
+	<Page 
+		title="{i18n>appTitle}" 
+		titleAlignment="Center" 
+		enableScrolling="false">
+		<l:Grid
+			content="{
+				path: 'configModel>/serviceTiles',
+				factory: '.createServiceTiles'
+			}"
+			class="sapUiMediumMarginTopBottom"
+			defaultSpan="XL2 L3 M6 S12"
+			position="Center">
+		</l:Grid>
+	</Page>
+</mvc:View>
