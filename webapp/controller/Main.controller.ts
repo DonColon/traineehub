@@ -3,6 +3,7 @@ import Context from "sap/ui/model/Context";
 import TileContent from "sap/m/TileContent";
 import ImageContent from "sap/m/ImageContent";
 import GenericTile, { GenericTile$PressEvent } from "sap/m/GenericTile";
+import { Avatar$PressEvent } from "sap/m/Avatar";
 
 
 /**
@@ -38,5 +39,10 @@ export default class Main extends BaseController
 	{
 		const serviceID = event.getParameter("id");
 		this.navigateTo(serviceID);
+	}
+
+	public onProfileClicked(event: Avatar$PressEvent)
+	{
+		this.navigateTo("profile");
 	}
 }

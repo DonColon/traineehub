@@ -68,12 +68,75 @@
 					"pattern": "",
 					"name": "main",
 					"target": "main"
+				},
+				{
+					"pattern": "trainee-plan",
+					"name": "trainee-plan",
+					"target": "trainee-plan"
+				},
+				{
+					"pattern": "trainee-report",
+					"name": "trainee-report",
+					"target": "trainee-report"
+				},
+				{
+					"pattern": "trainee-evaluation",
+					"name": "trainee-evaluation",
+					"target": "trainee-evaluation"
+				},
+				{
+					"pattern": "worklist",
+					"name": "worklist",
+					"target": "worklist"
+				},
+				{
+					"pattern": "trainee-library",
+					"name": "trainee-library",
+					"target": "trainee-library"
+				},
+				{
+					"pattern": "trainee-dashboard",
+					"name": "trainee-dashboard",
+					"target": "trainee-dashboard"
+				},
+				{
+					"pattern": "profile",
+					"name": "profile",
+					"target": "profile"
 				}
 			],
 			"targets": {
 				"main": {
 					"viewId": "main",
 					"viewName": "Main"
+				},
+				"trainee-plan": {
+					"viewId": "trainee-plan",
+					"viewName": "TraineePlan"
+				},
+				"trainee-report": {
+					"viewId": "trainee-report",
+					"viewName": "TraineeReport"
+				},
+				"trainee-evaluation": {
+					"viewId": "trainee-evaluation",
+					"viewName": "TraineeEvaluation"
+				},
+				"worklist": {
+					"viewId": "worklist",
+					"viewName": "Worklist"
+				},
+				"trainee-library": {
+					"viewId": "trainee-library",
+					"viewName": "TraineeLibrary"
+				},
+				"trainee-dashboard": {
+					"viewId": "trainee-dashboard",
+					"viewName": "TraineeDashboard"
+				},
+				"profile": {
+					"viewId": "profile",
+					"viewName": "Profile"
 				}
 			}
 		}

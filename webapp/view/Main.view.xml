@@ -4,18 +4,28 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout">
-	<Page 
-		title="{i18n>appTitle}" 
-		titleAlignment="Center" 
-		enableScrolling="false">
-		<l:Grid
-			content="{
-				path: 'configModel>/serviceTiles',
-				factory: '.createServiceTiles'
-			}"
-			class="sapUiMediumMarginTopBottom"
-			defaultSpan="XL2 L3 M6 S12"
-			position="Center">
+	<Page enableScrolling="false">
+		<customHeader>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Title text="{i18n>appTitle}"/>
+				<ToolbarSpacer/>
+				<Avatar
+					src=""
+					displaySize="XS"
+					displayShape="Circle"
+					press="onProfileClicked"/>
+			</OverflowToolbar>
+		</customHeader>
+		<content>
+			<l:Grid
+				content="{
+					path: 'configModel>/serviceTiles',
+					factory: '.createServiceTiles'
+				}"
+				class="sapUiSmallMarginTopBottom"
+				defaultSpan="XL2 L2 M6 S12">
 		</l:Grid>
+		</content>
 	</Page>
 </mvc:View>

@@ -14,8 +14,33 @@ export namespace models
 			serviceTiles: [{
 				id: "trainee-plan",
 				title: "Trainee Plan",
-				subtitle: "Overview department assignment",
+				subtitle: "Department assignment",
 				icon: "sap-icon://appointment-2",
+			}, {
+				id: "trainee-report",
+				title: "Trainee Report",
+				subtitle: "Maintain weekly report",
+				icon: "sap-icon://request"
+			}, {
+				id: "trainee-evaluation",
+				title: "Trainee Evaluation",
+				subtitle: "Rate the performance",
+				icon: "sap-icon://unfavorite"
+			}, {
+				id: "worklist",
+				title: "Worklist",
+				subtitle: "Maintain your tasks",
+				icon: "sap-icon://task"
+			},{
+				id: "trainee-library",
+				title: "Trainee Library",
+				subtitle: "Maintain Learn Documents",
+				icon: "sap-icon://education"
+			}, {
+				id: "trainee-dashboard",
+				title: "Trainee Dashboard",
+				subtitle: "Information and Analytics",
+				icon: "sap-icon://bbyd-dashboard"
 			}]
 		});
 

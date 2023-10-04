@@ -1,0 +1,9 @@
+<mvc:View
+	controllerName="com.dardan.rrafshi.traineehub.controller.TraineePlan"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+    <Text text="Trainee Plan"/>
+	
+</mvc:View>
