@@ -1,3 +1,4 @@
+import { Avatar$PressEvent } from "sap/m/Avatar";
 import BaseController from "./BaseController";
 
 
@@ -6,5 +7,8 @@ import BaseController from "./BaseController";
  */
 export default class TraineeDashboard extends BaseController
 {
-
+	public onProfileClicked(event: Avatar$PressEvent)
+	{
+		this.navigateTo("profile");
+	}
 }

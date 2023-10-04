@@ -39,7 +39,7 @@ export namespace models
 			}, {
 				id: "trainee-dashboard",
 				title: "Trainee Dashboard",
-				subtitle: "Information and Analytics",
+				subtitle: "Analytics and Information",
 				icon: "sap-icon://bbyd-dashboard"
 			}]
 		});

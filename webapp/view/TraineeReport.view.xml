@@ -3,7 +3,22 @@
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-
-    <Text text="Trainee Report"/>
-	
+	<Page enableScrolling="false">
+		<customHeader>
+			<OverflowToolbar>
+				<Button icon="sap-icon://nav-back" press="onBackward"/>
+				<ToolbarSpacer/>
+				<Title text="{i18n>appTitle}"/>
+				<ToolbarSpacer/>
+				<Avatar
+					src=""
+					displaySize="XS"
+					displayShape="Circle"
+					press="onProfileClicked"/>
+			</OverflowToolbar>
+		</customHeader>
+		<content>
+			<Text text="Trainee Report"/>
+		</content>
+	</Page>
 </mvc:View>
