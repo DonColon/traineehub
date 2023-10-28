@@ -9,6 +9,16 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources": {
+			"TraineeHubService": {
+				"uri": "/mockserver/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "mockserver/metadata.xml"
+				}
+			}
 		}
 	},
 
@@ -50,6 +60,14 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
 					"bundleName": "com.dardan.rrafshi.traineehub.i18n.i18n"
+				}
+			},
+			"TraineeHub": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"dataSource": "TraineeHubService",
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "TwoWay"
 				}
 			}
 		},

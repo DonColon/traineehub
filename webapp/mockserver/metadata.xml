@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="2.0">
+    <edmx:DataServices>
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="TraineeHub">
+            <EntityType Name="User">
+                <Key>
+                    <PropertyRef Name="userName" />
+                </Key>
+                <Property Name="userName" Type="Edm.String" />
+                <Property Name="firstName" Type="Edm.String" />
+                <Property Name="familyName" Type="Edm.String" />
+                <Property Name="birthday" Type="Edm.Date" />
+                <Property Name="mobileNumber" Type="Edm.String" />
+                <Property Name="email" Type="Edm.String" />
+                <Property Name="picture" Type="Edm.String" />
+                <Property Name="role" Type="Edm.String" />
+            </EntityType>
+
+            <EntityContainer Name="TraineeHubEntities">
+                <EntitySet Name="Users" EntityType="TraineeHub.User" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
