@@ -12,7 +12,7 @@
 		},
 		"dataSources": {
 			"TraineeHubService": {
-				"uri": "/mockserver/",
+				"uri": "/traineehub/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -44,7 +44,8 @@
 			"minUI5Version": "1.119.0",
 			"libs": {
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.m": {},
+				"sap.uxap": {}
 			}
 		},
 
@@ -53,6 +54,12 @@
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
+		},
+
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 
 		"models": {

@@ -9,12 +9,30 @@
                 <Property Name="userName" Type="Edm.String" />
                 <Property Name="firstName" Type="Edm.String" />
                 <Property Name="familyName" Type="Edm.String" />
+                <Property Name="description" Type="Edm.String" />
                 <Property Name="birthday" Type="Edm.Date" />
-                <Property Name="mobileNumber" Type="Edm.String" />
-                <Property Name="email" Type="Edm.String" />
                 <Property Name="picture" Type="Edm.String" />
                 <Property Name="role" Type="Edm.String" />
+
+                <CollectionProperty Name="hobbies" Type="Edm.String" />
+                <CollectionProperty Name="emails" Type="Edm.String" />
+                <CollectionProperty Name="phoneNumbers" Type="Edm.String" />
+                <CollectionProperty Name="addresses" Type="TraineeHub.Address" />
+                <CollectionProperty Name="socialMedia" Type="TraineeHub.SocialMedia" />
             </EntityType>
+
+            <ComplexType Name="Address">
+                <Property Name="id" Type="Edm.Int32" />
+                <Property Name="postalCode" Type="Edm.String" />
+                <Property Name="streetName" Type="Edm.String" />
+                <Property Name="streetNumber" Type="Edm.String" />
+                <Property Name="residence" Type="Edm.String" />
+            </ComplexType>
+
+            <ComplexType Name="SocialMedia">
+                <Property Name="type" Type="Edm.String" />
+                <Property Name="url" Type="Edm.String" />
+            </ComplexType>
 
             <EntityContainer Name="TraineeHubEntities">
                 <EntitySet Name="Users" EntityType="TraineeHub.User" />

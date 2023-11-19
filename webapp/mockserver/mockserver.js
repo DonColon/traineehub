@@ -7,7 +7,7 @@ sap.ui.define([
 	return {
 		initialize: () => {
             const mockServer = new MockServer({
-                rootUri: "/mockserver/",
+                rootUri: "/traineehub/",
             });
 
             const rootUrl = sap.ui.require.toUrl("com/dardan/rrafshi/traineehub/mockserver");

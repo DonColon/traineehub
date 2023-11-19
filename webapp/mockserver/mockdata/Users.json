@@ -3,10 +3,58 @@
         "firstName": "Dardan",
         "familyName": "Rrafshi",
         "userName": "DonColon",
+        "description": "Java is to JavaScript what a car is to a carpet. When you are Aladdin both work for transportation.",
+        "picture": "resources/images/Dardan Rrafshi.jpg",
         "birthday": "1997-01-30",
-        "mobileNumber": "+4915738961424",
-        "email": "dardan.rrafshi@gmail.com",
-        "picture": "images/Dardan Rrafshi.jpg",
-        "role": "Admin"
+        "role": "Administrator",
+        "hobbies": [
+            "Programming",
+            "Reading",
+            "Volleyball",
+            "Basketball",
+            "Gaming"
+        ],
+        "emails": [
+            "dardan.rrafshi@gmail.com",
+            "drrafshi@hotmail.de"
+        ],
+        "phoneNumbers": [
+            "+4915738961422"
+        ],
+        "adresses": [
+            {
+                "id": 1,
+                "postalCode": "88045",
+                "streetName": "Friedrichsstraße",
+                "streetNumber": "5A",
+                "resisdence": "Friedrichshafen"
+            }
+        ],
+        "socialMedia": [
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/dardan-rrafshi-a48197176/"
+            },
+            {
+                "type": "twitter",
+                "url": "https://twitter.com/DonSemiColon/"
+            },
+            {
+                "type": "instagram",
+                "url": "https://www.instagram.com/doncolon/"
+            },
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/dardan.rrafshi.31/"
+            },
+            {
+                "type": "youtube",
+                "url": "https://www.youtube.com/channel/UCvNjFEzgZ9keaI9FTmeeP8A"
+            },
+            {
+                "type": "twitch",
+                "url": "https://www.twitch.tv/doncolon/"
+            }
+        ]
     }
 ]

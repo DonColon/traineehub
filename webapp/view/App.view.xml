@@ -5,7 +5,7 @@
 	xmlns:mvc="sap.ui.core.mvc">
 
 	<Shell title="{i18n>appTitle}">
-		<App id="app"/>
+		<App id="app" busy="{appData>/busy}" busyIndicatorDelay="0"/>
 	</Shell>
 	
 </mvc:View>

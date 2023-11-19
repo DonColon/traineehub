@@ -11,7 +11,7 @@
 				<Title text="{i18n>appTitle}"/>
 				<ToolbarSpacer/>
 				<Avatar
-					src=""
+					src="{appData>/userInfo/picture}"
 					displaySize="XS"
 					displayShape="Circle"
 					press="onProfileClicked"/>

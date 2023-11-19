@@ -8,9 +8,9 @@ import { formatter } from "./formatter";
 
 export namespace models
 {
-	export function createConfigModel()
+	export function createAppConfigModel()
 	{
-		const configModel = new JSONModel({
+		const appConfig = new JSONModel({
 			serviceTiles: [{
 				id: "trainee-plan",
 				title: "Trainee Plan",
@@ -44,28 +44,28 @@ export namespace models
 			}]
 		});
 
-		configModel.setDefaultBindingMode(BindingMode.OneWay);
-		return configModel;
+		appConfig.setDefaultBindingMode(BindingMode.OneWay);
+		return appConfig;
 	}
 
-	export function createDataModel()
+	export function createAppDataModel()
 	{
-		const dataModel = new JSONModel({
-
+		const appData = new JSONModel({
+			busy: true
 		});
 
-		dataModel.setDefaultBindingMode(BindingMode.TwoWay);
-		return dataModel;
+		appData.setDefaultBindingMode(BindingMode.TwoWay);
+		return appData;
 	}
 
 	export function createDeviceModel()
 	{
-		const deviceModel = new JSONModel(Device);
-		deviceModel.setDefaultBindingMode(BindingMode.OneWay);
-		return deviceModel;
+		const device = new JSONModel(Device);
+		device.setDefaultBindingMode(BindingMode.OneWay);
+		return device;
 	}
 
-	export function createManifest(component: UIComponent)
+	export function createManifestModel(component: UIComponent)
 	{
 		const manifest = new JSONModel(component.getManifest());
 		manifest.setDefaultBindingMode(BindingMode.OneWay);

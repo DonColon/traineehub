@@ -15,10 +15,10 @@ export default class AppComponent extends UIComponent
 	{
 		super.init();
 
-		this.setModel(models.createManifest(this), "manifest");
-		this.setModel(models.createDeviceModel(), "deviceModel");
-		this.setModel(models.createConfigModel(), "configModel");
-		this.setModel(models.createDataModel(), "dataModel");
+		this.setModel(models.createManifestModel(this), "manifest");
+		this.setModel(models.createDeviceModel(), "device");
+		this.setModel(models.createAppConfigModel(), "appConfig");
+		this.setModel(models.createAppDataModel(), "appData");
 
 		const router = this.getRouter()
 		router.initialize();

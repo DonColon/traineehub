@@ -1,0 +1,7 @@
+.text-secondary {
+    color: rgb(160, 160, 160);
+}
+
+.profileHeader .sapUxAPObjectPageHeaderContent .sapUxAPObjectPageHeaderContentItem:last-child {
+    margin-right: 0px;
+}

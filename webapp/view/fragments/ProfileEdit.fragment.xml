@@ -1,0 +1,43 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+	xmlns:uxap="sap.uxap">
+    <uxap:ObjectPageSection titleUppercase="false">
+        <uxap:subSections>
+            <uxap:ObjectPageSubSection title="{i18n>personalData}" titleUppercase="false">
+                <uxap:blocks>
+                    <form:SimpleForm
+                        editable="false"
+                        layout="ColumnLayout"
+                        columnsM="2"
+                        columnsL="2"
+                        columnsXL="4">
+                        <form:content>
+                            <Label text="{i18n>name}" design="Bold"/>
+                            <Input id="firstNameInput"
+                                placeholder="{i18n>firstName}" 
+                                value="{appData>/userInfo/firstName}"/>
+                            <Input id="familyNameInput" 
+                                placeholder="{i18n>familyName}"
+                                value="{appData>/userInfo/familyName}"/>
+
+                            <Label text="{i18n>birthday}" design="Bold"/>
+                            <DatePicker id="birthdayInput" 
+                                value="{
+                                    path: 'appData>/userInfo/birthday',
+                                    type: 'sap.ui.model.type.Date',
+                                    formatOptions: { 
+                                        pattern: 'dd.MM.yyyy'
+                                    }
+                                }"/>
+
+                            <Label text="{i18n>description}" design="Bold"/>
+                            <TextArea width="100%" id="descriptionInput" value="{appData>/userInfo/description}"/>
+                        </form:content>
+                    </form:SimpleForm>
+                </uxap:blocks>
+            </uxap:ObjectPageSubSection>
+        </uxap:subSections>
+    </uxap:ObjectPageSection>
+</core:FragmentDefinition>

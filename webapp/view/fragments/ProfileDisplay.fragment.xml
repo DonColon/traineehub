@@ -1,0 +1,38 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+	xmlns:uxap="sap.uxap">
+    <uxap:ObjectPageSection titleUppercase="false">
+        <uxap:subSections>
+            <uxap:ObjectPageSubSection title="{i18n>personalData}" titleUppercase="false">
+                <uxap:blocks>
+                    <form:SimpleForm
+                        editable="false"
+                        layout="ColumnLayout"
+                        columnsM="2"
+                        columnsL="3"
+                        columnsXL="4">
+                        <form:content>
+                            <Label text="{i18n>name}" design="Bold"/>
+                            <Text id="firstName" text="{appData>/userInfo/firstName} {appData>/userInfo/familyName}"/>
+
+                            <Label text="{i18n>birthday}" design="Bold"/>
+                            <Text id="birthday" 
+                                text="{
+                                    path: 'appData>/userInfo/birthday',
+                                    type: 'sap.ui.model.type.Date',
+                                    formatOptions: { 
+                                        pattern: 'dd.MM.yyyy'
+                                    }
+                                }"/>
+
+                            <Label text="{i18n>description}" design="Bold"/>
+                            <Text id="description" text="{appData>/userInfo/description}"/>
+                        </form:content>
+                    </form:SimpleForm>
+                </uxap:blocks>
+            </uxap:ObjectPageSubSection>
+        </uxap:subSections>
+    </uxap:ObjectPageSection>
+</core:FragmentDefinition>
