@@ -6,7 +6,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:layout="sap.ui.layout"
 	xmlns:uxap="sap.uxap">
-	<Page enableScrolling="false">
+	<Page id="profilePage" enableScrolling="false">
 		<customHeader>
 			<OverflowToolbar>
 				<Button icon="sap-icon://nav-back" press="onBackward"/>
@@ -14,7 +14,7 @@
 				<Title text="{i18n>appTitle}"/>
 				<ToolbarSpacer/>
 				<Avatar
-					src="{appData>/userInfo/picture}"
+					src="{TraineeHub>picture}"
 					displaySize="XS"
 					displayShape="Circle"
 					press="onProfileClicked"/>
@@ -24,26 +24,26 @@
 			<uxap:ObjectPageLayout id="profile" class="profileHeader" showFooter="false">
 				<uxap:headerContent>
 					<Avatar
-						src="{appData>/userInfo/picture}"
+						src="{TraineeHub>picture}"
 						displaySize="XL"
 						displayShape="Circle"
 						press="onProfileClicked"/>
 				
 					<VBox width="30%">
 						<HBox>
-							<Title text="{appData>/userInfo/firstName} {appData>/userInfo/familyName}" 
+							<Title text="{TraineeHub>firstName} {TraineeHub>familyName}" 
 								titleStyle="H3"
 								level="H3"/>
 
 							<HBox items="{
-								path: 'appData>/userInfo/socialMedia',
+								path: 'TraineeHub>socialMedia',
 								factory: '.createSocialMedia'
 							}"/>
 						</HBox>
 
 						<HBox>
 							<Title class="text-secondary" 
-								text="{appData>/userInfo/userName} • {appData>/userInfo/role}"
+								text="{TraineeHub>userName} • {TraineeHub>role}"
 								titleStyle="H5"
 								level="H5"/>
 
@@ -55,7 +55,7 @@
 
 								<Title class="text-secondary" 
 									text="{
-										path: 'appData>/userInfo/birthday',
+										path: 'TraineeHub>birthday',
 										type: 'sap.ui.model.type.Date',
 										formatOptions: { 
 											pattern: 'dd.MM.yyyy'
@@ -66,7 +66,7 @@
 							</HBox>
 						</HBox>
 
-						<Text text="{appData>/userInfo/description}"
+						<Text text="{TraineeHub>description}"
 							wrappingType="Hyphenated"
 							wrapping="true"/>
 					</VBox>
@@ -80,8 +80,8 @@
 				<uxap:footer>
 					<Bar>
 						<contentRight>
-							<Button text="{i18n>save}" icon="sap-icon://save" type="Emphasized" press="onSave"/>
 							<Button text="{i18n>cancel}" icon="sap-icon://decline" press="onCancel"/>
+							<Button text="{i18n>save}" icon="sap-icon://save" type="Emphasized" press="onSave"/>
 						</contentRight>
 					</Bar>
 				</uxap:footer>

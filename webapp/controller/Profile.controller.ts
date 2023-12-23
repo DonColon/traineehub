@@ -3,6 +3,8 @@ import Context from "sap/ui/model/Context";
 import Image, { Image$PressEvent } from "sap/m/Image";
 import { Button$PressEvent } from "sap/m/Button";
 import ObjectPageLayout from "sap/uxap/ObjectPageLayout";
+import JSONModel from "sap/ui/model/json/JSONModel";
+import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 
 
 /**
@@ -10,8 +12,29 @@ import ObjectPageLayout from "sap/uxap/ObjectPageLayout";
  */
 export default class Profile extends BaseController
 {
+    private mainService: ODataModel;
+    private appData: JSONModel;
+
+
     public onInit()
     {
+        this.mainService = this.getServiceModel("TraineeHub");
+        this.appData = this.getAppDataModel();
+
+        const userName = this.appData.getProperty("/user");
+        const entityName = `/Users('${userName}')`
+
+        this.mainService.read(entityName, {
+			success: (data: any) => {
+                const view = this.getView();
+                
+                view.bindObject({
+                    path: entityName,
+                    model: "TraineeHub"
+                });
+            }
+		});
+
         this.switchViewMode("profile", "sections", "Display");
     }
 

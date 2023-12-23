@@ -5,7 +5,7 @@
         "userName": "DonColon",
         "description": "Java is to JavaScript what a car is to a carpet. When you are Aladdin both work for transportation.",
         "picture": "resources/images/Dardan Rrafshi.jpg",
-        "birthday": "1997-01-30",
+        "birthday": "\/Date(854582400000)\/",
         "role": "Administrator",
         "hobbies": [
             "Programming",

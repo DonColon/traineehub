@@ -15,12 +15,12 @@
                         columnsXL="4">
                         <form:content>
                             <Label text="{i18n>name}" design="Bold"/>
-                            <Text id="firstName" text="{appData>/userInfo/firstName} {appData>/userInfo/familyName}"/>
+                            <Text id="firstName" text="{TraineeHub>firstName} {TraineeHub>familyName}"/>
 
                             <Label text="{i18n>birthday}" design="Bold"/>
                             <Text id="birthday" 
                                 text="{
-                                    path: 'appData>/userInfo/birthday',
+                                    path: 'TraineeHub>birthday',
                                     type: 'sap.ui.model.type.Date',
                                     formatOptions: { 
                                         pattern: 'dd.MM.yyyy'
@@ -28,7 +28,7 @@
                                 }"/>
 
                             <Label text="{i18n>description}" design="Bold"/>
-                            <Text id="description" text="{appData>/userInfo/description}"/>
+                            <Text id="description" text="{TraineeHub>description}"/>
                         </form:content>
                     </form:SimpleForm>
                 </uxap:blocks>

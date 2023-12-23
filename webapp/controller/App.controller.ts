@@ -12,34 +12,20 @@ export default class App extends BaseController
 	private appData: JSONModel;
 
 
-	public onInit()
+	public async onInit()
 	{
 		this.mainService = this.getServiceModel("TraineeHub");
 		this.appData = this.getAppDataModel();
 
+		await this.mainService.metadataLoaded();
+
 		const urlParameters = new URLSearchParams(window.location.search);
 		const userName = urlParameters.get("user");
 
-		this.mainService.read(`/Users('${userName}')`, {
-			success: this.onServiceSuccess.bind(this),
-			error: this.onServiceError.bind(this)
-		});
+		this.appData.setProperty("/user", userName);
+		this.appData.setProperty("/busy", false);
 
 		var view = this.getView();
 		view.addStyleClass(this.getContentDensityClass());
-	}
-
-
-	private onServiceSuccess(data: any)
-	{
-		data["birthday"] = new Date(data["birthday"]);
-
-		this.appData.setProperty("/userInfo", data);
-		this.appData.setProperty("/busy", false);
-	}
-
-	private onServiceError()
-	{
-		this.appData.setProperty("/busy", false);
 	}
 }

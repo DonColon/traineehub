@@ -14,6 +14,7 @@ import Fragment from "sap/ui/core/Fragment";
 import ManagedObject from "sap/ui/base/ManagedObject";
 import { UI5Error } from "../utils/UI5Error";
 import Metadata from "sap/ui/base/Metadata";
+import UI5Element from "sap/ui/core/Element";
 
 
 interface ViewModes {
@@ -85,6 +86,9 @@ export default abstract class BaseController extends Controller
                 name: `${viewNamespace}.fragments.${viewName}${mode}`,
                 controller: this
             });
+
+			const view = this.getView();
+			view.addDependent(control as UI5Element);
 
             this.viewModes[viewName][mode] = control;
         }

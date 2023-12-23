@@ -10,7 +10,7 @@
                 <Property Name="firstName" Type="Edm.String" />
                 <Property Name="familyName" Type="Edm.String" />
                 <Property Name="description" Type="Edm.String" />
-                <Property Name="birthday" Type="Edm.Date" />
+                <Property Name="birthday" Type="Edm.DateTime" />
                 <Property Name="picture" Type="Edm.String" />
                 <Property Name="role" Type="Edm.String" />
 
